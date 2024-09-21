@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+i {
+    color: rgb(255, 255, 255); /* Relleno blanco */
+    font-size: 90px;
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    padding: 20px;
+    animation: beat 0.9s infinite;
+    text-shadow: 
+        0 0 5px magenta,   /* Sombra neón magenta */
+        0 0 15px magenta,  /* Más sombra */
+        0 0 30px red,      /* Sombra difusa roja */
+        0 0 45px red;      /* Sombra más difusa roja */
+}
+
+.text-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); /* Relleno blanco */
+    font-size: 15px;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 
+        0 0 5px magenta,    /* Sombra neón magenta */
+        0 0 10px magenta,   /* Más sombra */
+        0 0 15px rgb(255, 0, 0), /* Brillo rojo */
+        0 0 20px rgb(0, 0, 0); /* Más difuso rojo */
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.5);
+    }
+    40% {
+        transform: scale(3.0);
+    }
+    60% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

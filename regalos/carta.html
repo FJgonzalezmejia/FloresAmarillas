@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="carta.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(5, 53, 61);
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>MaFer.</strong>
+                        <p>
+                            Sé que esto puede parecer un poco loco, pero como no puedo darte flores en persona, te las traigo de manera virtual. Y ya que soy programador, espero que esto te guste.
+                            Sé que a veces hablamos mucho y otras veces pasan 3 o 5 días sin que hablemos, pero en este tiempo que te he conocido, han pasado muchas cosas. No sé cómo expresar todo lo que siento, pero realmente me gustaría que nos siguieras conociendo más, si tú lo permites. Si no, lo entenderé.
+                            Espero que te guste este detalle que te hice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button onclick="location.href='index.html'">Atrás</button>
+        <button onclick="location.href='flores.html'">Siguiente</button>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
